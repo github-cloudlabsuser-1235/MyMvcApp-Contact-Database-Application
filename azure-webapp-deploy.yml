@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: MyMvcApp
-        path: C:\Users\azureuser\Documents\MyMvcApp-Contact-Database-Application\bin\Release\net8.0\publish\
+        path: C:\Users\azureuser\Documents\MyMvcApp-Contact-Database-Application\bin\Release\net8.0\MyMvcApp
     
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -39,4 +39,5 @@ jobs:
         app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
         slot-name: 'production'
         publish-profile: ${{ secrets.AZURE_CREDENTIALS }}
-        package: C:\Users\azureuser\Documents\MyMvcApp-Contact-Database-Application\bin\Release\net8.0\publish
+        package: C:\Users\azureuser\Documents\MyMvcApp-Contact-Database-Application\bin\Release\net8.0\MyMvcApp
+
